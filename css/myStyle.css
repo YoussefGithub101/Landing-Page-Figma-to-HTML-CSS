@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;400;900&display=swap');
+
+
+:root{
+    --orange-color:#DA722C;
+    --DarkBlue-color:#057ADA;
+    --LightBlue-color:#E8F7FB;
+    --blue-color:#023047;
+    --blackBlue-color:#070917;
+    --Light-color:#6F7DFB;
+    --header-color:#26308C;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins",sans-serif;
+}
+/*------------ navbar ------------*/
+header{
+   background-color: #6F7DFB;
+}
+
+header{
+   position: sticky; top: 0;
+   transition: background-color 0.4s ease-in-out;
+     z-index:9 ;
+ }
+.btn{
+    color: white;
+    padding: 16px 32px ;
+    
+}
+.btnLayout{
+    border-radius: 24px;
+    background-color: var(--blackBlue-color);
+}
+.nav-link{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+}
+ul{
+     gap: 60px;
+      
+}
+ .logo{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 900;
+     
+ }
+
+/*  -----header when scrolling---------- */
+ 
+
+   header.scrolled {
+     background-color: #070917;
+     opacity: 0.98;
+    }
+   header.scrolled .btn{
+     color: black;
+    }
+   header.scrolled .btnLayout{
+     background-color: var(--orange-color);
+  }
+
+/*  -----  resposive navbar  ---------- */
+ .Menu,.close{
+    display: none;
+ }
+ 
+ @media screen and (max-width: 787px) {
+ 
+    .Menu,.close{
+        display:block;
+     }
+     .nav {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--blackBlue-color);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    
+    .nav.responsive {
+      transform: translateX(0);
+    }
+    
+  
+     .nav li{
+        width: 145px;
+        text-align: center;
+     }
+     .nav a{
+       
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 400;
+     }
+
+     .btnLayout{
+        border-radius: 24px;
+        background-color: var(--orange-color);
+    }
+    .btn{
+        font-family: "poppins",sans-serif;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        padding: 12px 32px !important;
+    }
+    .close{
+        position: absolute;
+        top:34px;
+        right: 20px;
+    }
+  }
+ /*------------  header body ------------*/
+ .section2{
+   background: linear-gradient(180deg, var(--Light-color) 0%, var(--header-color) 100%);
+}
+.section-one{
+   padding-top: 80px;
+}
+ section h1 {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+ }
+ section p{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 200%;
+ }
+
+ .btn-orange{
+    padding: 12px 32px;
+    color: #FFF;
+    gap: 10px;
+    display: inline-flex;
+    align-items: center;
+ }
+ .btnLayout-orange{
+ 
+    width: 171px;
+    border-radius: 24px;
+    background-color: var(--orange-color);
+ }
+  /*------------  header body2 ------------*/
+  .hero-section{
+   position: relative;
+   height: 582px;
+ 
+   padding: 0;
+   background: url('../images/hero-image 1.png') ;  
+   background-position: right bottom;
+   background-repeat: no-repeat;
+ }
+ 
+
+   .floting{
+    padding:7px 0px;
+    border-radius: 24px;
+    background: #FFF;
+   
+    height: 90px;
+
+   }
+   .floting h3 , .floting p{
+    color: #023047;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 125%;
+   }
+   .floting p{
+    font-size: 16px;
+    font-weight: 400;
+   }
+   .f1,.bg1{
+    position: absolute;
+    bottom: 358px;
+    left: 30px;
+    width: 206px;
+     z-index: 2;
+    
+   }
+   .f2,.bg2{
+    position: absolute;
+    bottom: 166px;
+    left: 0px;
+    width:183px ;
+    z-index: 2;
+    
+   }
+.bg1{
+    width: 206px;
+    height: 90px;
+    position: absolute;
+    bottom: 350px;
+    left: 38px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #6F7DFB 0%, #3B448F 100%);
+    z-index: 1;
+}
+ 
+.bg2{
+    width:183px;
+    height: 90px;
+    position: absolute;
+    bottom: 158px;
+    left: 8px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #6F7DFB 0%, #3B448F 100%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+
+   .hero-section{
+ /*      border: 1px solid rgb(2, 255, 78); */
+       background-size: 90% 547px;
+      background-position: right -120px bottom;
+
+  
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+ 
+    .f1,.bg1{
+      width: 182px;
+     }
+     .f2,.bg2{
+      width:160px ;
+       
+   }
+}
+
+/* section two */
+
+.section-two{
+    position: relative;
+    align-items: center;
+   gap: 45px;
+    padding: 100px 0px;
+   /*  border: 1px solid red; */
+    
+}
+.teams::after{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 546px;
+    flex-shrink: 0;
+    bottom: -45px;
+    border-radius: 24px;
+    background: #023047;
+    left: 87px;
+    z-index: -1;
+}
+ .card1,.card2{
+    width: 442px;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 9px 36px 0px rgba(0, 0, 0, 0.20);
+ }
+ .teams{
+    /* border: 1px solid red; */
+    position: relative;
+ }
+
+
+
+ .card2{
+    margin-left: 25px;
+ }
+ .blue-card{
+    border-radius: 24px;
+    background: #6F7DFB;
+    padding: 24px 32px;
+ }
+ .orange-card{
+    border-radius: 24px;
+    background: #DA722C;
+    padding: 24px 32px;
+ }
+ .teams h3{
+    color: #FFF;
+    font-family: "Raleway",sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+ }
+ .teams h2{
+    color: #023047;
+    font-family: "Raleway",sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+ }
+ .teams p{
+    color: #023047;
+    font-family: "Raleway",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%
+ }
+ .teams img{
+    margin-top: -24px;
+    margin-bottom: 12px;
+ }
+ 
+
+ .contant h2{
+   color: #023047;
+   font-family: Raleway;
+   font-size: 55px;
+   font-weight: 900;
+   line-height: 120%;
+ }
+ .contant p{
+   color: #023047;
+   font-family: Poppins;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 200%;
+ }
+ .orangebtnL{
+    width: 167px;
+    background: #DA722C;
+ }
+ 
+
+
+ @media screen and (max-width: 991px) {
+    .card2,.card1{
+        margin-left: 0px;
+        width: 100%;
+     }
+     .teams::after{
+         height: 117%;
+     
+    }
+  }
+
+
+  /* section-three */
+
+  .section-three{
+   background: linear-gradient(180deg, #6F7DFB 0%, #26308C 100%);
+   padding: 70px 0px;
+  }
+  .section-three h2{
+   color: #FFF;
+   font-family: Raleway;
+   font-size: 60px;
+   font-weight: 900;
+   line-height: 120%;
+  }
+  .course-cardDiv{
+   gap: 70px;
+  }
+  .course-card{
+    padding: 0px 32px;
+     height: 100%;
+    border-radius: 24px;
+    background: #FFF;
+    position: relative;
+  }
+  .course-card::after{
+   position: absolute;
+   content: "";
+   height: 8px;
+   left: 32px;
+   right: 32px;
+   bottom: 0;
+   border-radius: 24px;
+   background: #023047;
+  }
+  .img-course{
+   width: 100%;
+   height: 260px;
+  }
+  .course-card h2{
+   color: #023047;
+   font-family: Raleway;
+   font-size: 30px;
+   width: 80%;
+   font-weight: 900;
+   line-height: 150%;
+
+  }
+  .course-card small{
+   color: #023047;
+   font-family: Raleway;
+   font-size: 16px;
+   white-space: nowrap;
+   font-weight: 900;
+   line-height: 150%;
+  }
+  /* -----------------section-fore----------------- */
+  .section-fore{
+   padding: 100px 0px;
+  }
+  .section-fore h2 {
+   color: #023047;
+   
+   font-family: Raleway;
+   font-size: 60px;
+   font-style: normal;
+   font-weight: 900;
+   line-height: 120%;
+  }
+  .section-fore p {
+   color: #023047;
+   
+   font-family: Poppins;
+   font-size: 16px;
+  
+   font-weight: 400;
+   line-height: 200%;
+  }
+  .Apps-parent{
+   gap: 30px;
+  }
+  .Apps{
+   width: 310px;
+   padding: 20px 31px;
+   align-items: center;
+   background: #000;
+  }
+  .Apps h2{
+   color: #FFF;
+   text-align: center;
+   font-family: Poppins;
+   font-size: 24px;
+    
+   font-weight: 400;
+   line-height: 200%;
+  }
+
+ /*  --------footer------- */
+ footer{
+   background: #070917;
+   padding: 70px 0px;
+ }
+ footer h3{
+   color: #DA722C;
+   font-family: Poppins;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 200%;
+    
+}
+footer li{
+  list-style: none;
+  padding: 9px 0px;
+}
+ footer a,.copyright{
+   color: #FFF;
+   font-family: Poppins;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 200%;
+   text-decoration: none;
+ }
+ footer form{
+   position: relative;
+ }
+ footer input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    height: 39px;
+ }
+ input[type=text]{
+   padding: 4px 27px;
+ }
+
+    .Subscribe{
+      border-radius: 8px;
+      background: #023047;
+      width: 135px;
+      height: 30px;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+      top:50%;
+      transform: translateY(-50%);
+
+    }
+    .Subscribe p {
+      text-align: center;
+      color: #FFF;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 200%;
+       
+    }
+    @media screen and (max-width: 575px) {
+      .link{
+        justify-content: center;
+        text-align: center;
+      }
+      footer ul {
+         padding-left: 0;
+       }
+       footer .social{
+         justify-content: center;
+       }
+       .Subscribe{
+         position: static;
+         right: 0;
+         top:0;
+         transform: translateY(0);
+         
+       }
+       footer form{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+       }
+       .copyright{
+         text-align: center;
+       }
+    }
