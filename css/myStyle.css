@@ -60,6 +60,14 @@ ul{
      background-color: #070917;
      opacity: 0.98;
     }
+    
+    nav{
+     transition: all 0.4s ease;
+   }
+    header.scrolled nav{
+      padding: 15px 0px !important;
+    }
+    
    header.scrolled .btn{
      color: black;
     }
